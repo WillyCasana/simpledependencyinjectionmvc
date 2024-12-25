@@ -1,8 +1,10 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using WazeCredit.Models;
 using WazeCredit.Models.ViewModels;
 using WazeCredit.Service;
+using WazeCredit.Utility.AppSettingsClasses;
 
 namespace WazeCredit.Controllers;
 
@@ -10,11 +12,27 @@ public class HomeController : Controller
 {
     public HomeVM homeVM{get;set;}
     private readonly IMarketForecaster _marketForecaster;
+    private readonly StripeSettings _stripeOptions;
+    private readonly SendgridSettings _sendGridOptions;
+    private readonly TwilioSettings _twilioOptions;
+    private readonly WazeForecastSettings _wazeOptions;
+    
 
-    public HomeController(IMarketForecaster marketForecaster)
+    public HomeController(IMarketForecaster marketForecaster,
+        IOptions<StripeSettings> stripeOptions,
+        IOptions<SendgridSettings> sendGridOptions,
+        IOptions<TwilioSettings> twilioOptions,
+        IOptions<WazeForecastSettings> wazeOptions
+        )
     {
         homeVM = new HomeVM();
         _marketForecaster = marketForecaster;
+        _stripeOptions= stripeOptions.Value;
+        _sendGridOptions= sendGridOptions.Value;
+        _twilioOptions= twilioOptions.Value;
+        _wazeOptions= wazeOptions.Value;
+        
+
     }
     public IActionResult Index()
     {
@@ -40,6 +58,14 @@ public class HomeController : Controller
         return View(homeVM);
     }
 
+    public IActionResult AllConfigSettings()
+    {
+        List<string> messages = new List<string>();
+        messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
+        messages.Add($"Stripe config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
+        messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
+        messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
+    }
     public IActionResult Privacy()
     {
         return View();

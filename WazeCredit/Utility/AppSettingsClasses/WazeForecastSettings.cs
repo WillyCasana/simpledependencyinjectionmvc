@@ -3,5 +3,5 @@ namespace WazeCredit.Utility.AppSettingsClasses;
 
 public class WazeForecastSettings
 {
-    public string ForecastTrackerEnabled {get;set;} = string.Empty;
+    public bool ForecastTrackerEnabled {get;set;} = false;
 }

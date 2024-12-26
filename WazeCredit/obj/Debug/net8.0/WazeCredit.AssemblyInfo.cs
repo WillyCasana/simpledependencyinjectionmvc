@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WazeCredit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+961f334688d55c9d0e3faf777583e46def23657b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5600158db10eb4c2f959973a0e04c4f52f3b131")]
 [assembly: System.Reflection.AssemblyProductAttribute("WazeCredit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WazeCredit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

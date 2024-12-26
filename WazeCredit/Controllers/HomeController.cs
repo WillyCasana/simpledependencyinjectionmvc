@@ -62,9 +62,11 @@ public class HomeController : Controller
     {
         List<string> messages = new List<string>();
         messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
-        messages.Add($"Stripe config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
-        messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
-        messages.Add($"Waze config - Forecast Tracker: " + _wazeOptions.ForecastTrackerEnabled);
+        messages.Add($"Stripe Publishable Key: " + _stripeOptions.PublishableKey);
+        messages.Add($"Twilio Phone: " + _twilioOptions.PhoneNumber);
+        messages.Add($"Twilio SID " + _twilioOptions.AccountSid);
+        messages.Add($"Twilio Token " + _twilioOptions.AuthToken);
+        return View(messages);
     }
     public IActionResult Privacy()
     {

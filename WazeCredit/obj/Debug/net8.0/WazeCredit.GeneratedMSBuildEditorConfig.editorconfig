@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /workspaces/simpledependencyinjectionmvc/WazeCredit
 build_property._RazorSourceGeneratorDebug = 
 
+[/workspaces/simpledependencyinjectionmvc/WazeCredit/Views/Home/AllConfigSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BbGxDb25maWdTZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/simpledependencyinjectionmvc/WazeCredit/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
